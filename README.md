@@ -7,8 +7,9 @@
 ```
 $ docker-compose run --rm app <command>
 $ docker-compose run --rm app ruby --version
+$ docker-compose run --rm app bundle exec rails new . --skip
 $ docker-compose run --rm app bundle install
-$ docker-compose run --rm app bundle exec rails new hello
+$ docker-compose up -d
 
 memo:
 --rm: 停止したらDockerコンテナを削除する
