@@ -2,21 +2,16 @@
 
 ## With Docker
 
-### Dockerイメージを作成
-
-```
-$ docker build -t rails-app .
-```
-
 ### Docker起動
 
 ```
-$ docker run --rm -v $PWD:/project rails-app <command>
-$ docker run --rm -v $PWD:/project rails-app ruby --version
+$ docker-compose run --rm app <command>
+$ docker-compose run --rm app ruby --version
+$ docker-compose run --rm app bundle install
+$ docker-compose run --rm app bundle exec rails new hello
 
-options
+memo:
 --rm: 停止したらDockerコンテナを削除する
--v: ボリューム（ファイル）をDockerコンテナと共有する
-ex) -v $PWD:/project カレントディレクトリをDockerコンテナ内の/projectと共有する
+bundle exec rails s: Railsをbundler経由でインストールしているのでbundle execをつける
 ```
 

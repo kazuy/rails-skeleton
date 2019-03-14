@@ -1,0 +1,16 @@
+version: '2'
+services:
+  app:
+    container_name: rails_app
+    build: .
+    volumes:
+      - .:/app
+      - bundle:/usr/local/bundle
+    command: bundle exec rails s
+    ports:
+      - 3000:3000
+    tty: true
+    stdin_open: true
+volumes:
+  bundle:
+    driver: local
