@@ -20,9 +20,19 @@ $ docker-compose run --rm app bundle install
 
 Do your favorite IDE.
 
-## Start Up
+## Start Up & Down
 
 ```
 $ docker-compose up -d
+$ docker-compose stop
+```
+
+## Switch GitHub Repository
+
+```
+$ git remote set-url origin <your-app-repository>
+
+ex)
+$ git remote set-url origin git@github.com:kazuy/hello_rails.git
 ```
 
